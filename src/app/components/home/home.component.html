@@ -4,41 +4,38 @@
       <div class="formulario">
         <div class="card mt-4">
           <div class="card-body">
-            <form (submit)="addMeal(gramosTotales, gramosProteina, gramosGrasa, gramosCarbos)">
-              <!-- Cuantos gramos -->
+
+            <form (submit)="addMeal(totalGrams, proteinGrams, fatGrams, carbGrams)">
               <div class="form-group">
                 <input
                   class="form-control"
                   type="number"
-                  placeholder="Gramos totales"
-                  #gramosTotales
+                  placeholder="Total"
+                  #totalGrams
                 />
               </div>
-              <!-- Cuantos gramos de proteina -->
               <div class="form-group">
                 <input
                   class="form-control"
                   type="number"
-                  placeholder="Gramos proteína"
-                  #gramosProteina
+                  placeholder="Protein"
+                  #proteinGrams
                 />
               </div>
-              <!-- Cuantos gramos de grasa -->
               <div class="form-group">
                 <input
                   class="form-control"
                   type="number"
-                  placeholder="Gramos de grasa"
-                  #gramosGrasa
+                  placeholder="Fat"
+                  #fatGrams
                 />
               </div>
-              <!-- Cuantos gramos de carbohidratos -->
               <div class="form-group">
                 <input
                   class="form-control"
                   type="number"
-                  placeholder="Gramos de carbos"
-                  #gramosCarbos
+                  placeholder="Carbs"
+                  #carbGrams
                 />
               </div>
 
@@ -46,16 +43,16 @@
                 Enviar
               </button>
             </form>
+            
           </div>
         </div>
       </div>
     </div>
 
     <div class="col-md-9">
-      <div class="grafica">
+      <div class="chart">
         <div class="card mt-4">
           <div class="card-body">
-            <div>
               <div style="display: block">
                 <canvas
                   baseChart
@@ -64,7 +61,6 @@
                 >
                 </canvas>
               </div>
-            </div>
           </div>
         </div>
       </div>
