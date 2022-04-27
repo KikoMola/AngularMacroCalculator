@@ -1,1 +1,73 @@
-<h1>Hey</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3">
+      <div class="formulario">
+        <div class="card mt-4">
+          <div class="card-body">
+            <form (submit)="addMeal(gramosTotales, gramosProteina, gramosGrasa, gramosCarbos)">
+              <!-- Cuantos gramos -->
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="number"
+                  placeholder="Gramos totales"
+                  #gramosTotales
+                />
+              </div>
+              <!-- Cuantos gramos de proteina -->
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="number"
+                  placeholder="Gramos proteína"
+                  #gramosProteina
+                />
+              </div>
+              <!-- Cuantos gramos de grasa -->
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="number"
+                  placeholder="Gramos de grasa"
+                  #gramosGrasa
+                />
+              </div>
+              <!-- Cuantos gramos de carbohidratos -->
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="number"
+                  placeholder="Gramos de carbos"
+                  #gramosCarbos
+                />
+              </div>
+
+              <button type="submit" class="btn btn-primary btn-block">
+                Enviar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-9">
+      <div class="grafica">
+        <div class="card mt-4">
+          <div class="card-body">
+            <div>
+              <div style="display: block">
+                <canvas
+                  baseChart
+                  [data]="doughnutChartData"
+                  [type]="doughnutChartType"
+                >
+                </canvas>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
