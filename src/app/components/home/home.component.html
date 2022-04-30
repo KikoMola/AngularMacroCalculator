@@ -5,11 +5,11 @@
         <div class="card mt-4">
           <div class="card-body">
 
-            <form (submit)="addMeal(totalGrams, proteinGrams, fatGrams, carbGrams)">
+            <form (submit)="addMeal(totalGrams, totalCals, proteinGrams, fatGrams, carbGrams)">
               <div class="form-group">
                 <input
                   class="form-control"
-                  type="number"
+                  type="number" step="any" min = "0"
                   placeholder="Total"
                   #totalGrams
                 />
@@ -17,24 +17,32 @@
               <div class="form-group">
                 <input
                   class="form-control"
-                  type="number"
-                  placeholder="Protein"
+                  type="number" step="any" min = "0"
+                  placeholder="Calorias"
+                  #totalCals
+                />
+              </div>
+              <div class="form-group">
+                <input
+                  class="form-control"
+                  type="number" step="any" min = "0"
+                  placeholder="Proteina"
                   #proteinGrams
                 />
               </div>
               <div class="form-group">
                 <input
                   class="form-control"
-                  type="number"
-                  placeholder="Fat"
+                  type="number" step="any" min = "0"
+                  placeholder="Grasa"
                   #fatGrams
                 />
               </div>
               <div class="form-group">
                 <input
                   class="form-control"
-                  type="number"
-                  placeholder="Carbs"
+                  type="number" step="any" min = "0"
+                  placeholder="Carbohidratos"
                   #carbGrams
                 />
               </div>
